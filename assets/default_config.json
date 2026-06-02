@@ -1,0 +1,56 @@
+{
+    "_comment": "AetherAim v1.0 — Default Configuration. Edit via GUI or carefully by hand.",
+
+    "schemaVersion": "1.0",
+
+    "global": {
+        "enabled": false,
+        "hotkey": 144,
+        "hotkeyAlt": 119,
+        "startMinimized": false,
+        "runOnStartup": false
+    },
+
+    "filter": {
+        "type": "one_euro",
+        "oneEuro": {
+            "minCutoff": 1.2,
+            "beta": 0.0,
+            "dCutoff": 1.0,
+            "speedCoeff": 1.0,
+            "minJitter": 0.001
+        },
+        "ema": {
+            "alpha": 0.6
+        },
+        "kalman": {
+            "processNoise": 0.01,
+            "measurementNoise": 0.1,
+            "initialError": 1.0
+        }
+    },
+
+    "advanced": {
+        "deadzonePx": 0,
+        "maxDeltaPx": 100,
+        "pollingRateHz": 1000,
+        "subPixelAccum": true
+    },
+
+    "profiles": {
+        "activeProfile": "default",
+        "profileDir": "./profiles/",
+        "autoSave": true,
+        "autoSaveIntervalS": 60
+    },
+
+    "gui": {
+        "windowX": 100,
+        "windowY": 100,
+        "windowW": 900,
+        "windowH": 700,
+        "showRealtimePlot": true,
+        "showRadarChart": true,
+        "plotHistoryS": 3.0
+    }
+}

@@ -1,0 +1,29 @@
+# Build artifacts
+build/
+out/
+*.exe
+*.lib
+*.dll
+*.pdb
+*.ilk
+*.exp
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+CMakeUserPresets.json
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Project specific
+profiles/*.db
+*.log

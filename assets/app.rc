@@ -1,0 +1,50 @@
+// ============================================================================
+// AetherAim Resource File
+//
+// To use a custom application icon:
+//   1. Create a 256x256 icon file named "icon.ico"
+//   2. Place it in the assets/ directory
+//   3. Rebuild — CMake detects it and defines HAS_CUSTOM_ICON
+//
+// Without a custom icon, the default Windows application icon is used
+// (IDI_APPLICATION) for both the window and the system tray.
+// ============================================================================
+
+#include <windows.h>
+
+#ifdef HAS_CUSTOM_ICON
+// Main application icon (used for window + system tray)
+IDI_MAIN_ICON       ICON    "assets/icon.ico"
+#endif
+
+// Version information block (displayed in file properties)
+#ifndef _DEBUG
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "AetherAim Contributors"
+            VALUE "FileDescription",  "AetherAim — FPS Accessibility Assistant"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "AetherAim"
+            VALUE "LegalCopyright",   "MIT License"
+            VALUE "OriginalFilename", "AetherAim.exe"
+            VALUE "ProductName",      "AetherAim"
+            VALUE "ProductVersion",   "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200  // English (US), Unicode
+    END
+END
+#endif
